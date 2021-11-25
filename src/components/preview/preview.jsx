@@ -1,10 +1,14 @@
-import React from 'react';
+import React,{useState} from 'react';
+import Card from '../card/card';
 import styles from './preview.module.css'
 
-const Preview = (props) => {
+const Preview = ({diary}) => {
     return(
         <div className={styles.preview}>
-        preview
+        {diary.map(item => (
+         <Card item={item}/>
+        ))};
+       
         </div>
     )
 }
